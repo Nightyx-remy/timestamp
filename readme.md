@@ -8,7 +8,7 @@ Keep in mind that this library links with LibC!
 Clone this repository in your libs folder.
 
 ```sh
-git clone https://github.com/remy-nightyx/timestamp
+git clone https://github.com/Nightyx-remy/timestamp
 ```
 
 Then add the following line in the `build.zig`:
