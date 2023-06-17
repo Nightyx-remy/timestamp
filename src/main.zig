@@ -5,13 +5,13 @@ const c = @cImport(
 
 /// Enumeration of the week days with their corresponding day number (Monday is 1, Sunday is 7)
 pub const WeekDay = enum(u8) {
-    Monday = 1,
+    Sunday = 0,
+    Monday,
     Tuesday,
     Wednesday,
     Thursday,
     Friday,
     Saturday,
-    Sunday
 };
 
 /// Enumeration of the months with their corresponding month number (January is 1, December is 12)
@@ -69,7 +69,7 @@ pub const Timestamp = struct {
     /// rawtime being the raw timestamp
     pub fn from_rawtime_local(rawtime: i64) Timestamp {
         const info = c.localtime(&rawtime);
-
+        
         return Timestamp {
             .rawtime = rawtime,
             .date = Date {
