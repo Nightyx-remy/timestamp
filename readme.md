@@ -19,7 +19,7 @@ const timestamp = @import("libs/timestamp/build.zig");
 pub fn build(b: *Build) !void {
     ...
     exe.addModule("timestamp", timestamp.module(b));
-    try timestamp.link(b, exe);
+    try timestamp.link(exe);
 }
 ```
 
