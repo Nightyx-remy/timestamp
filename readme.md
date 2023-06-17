@@ -30,7 +30,7 @@ const std = @import("std");
 const timestamp = @import("timestamp");
 const Timestamp = timestamp.Timestamp;
 
-pub fn main() {
+pub fn main() void {
     // Get the current UTC time & date
     const utc_now = Timestamp.now_utc();
     std.debug.print("{}/{}/{} {}:{}:{}\n", .{
